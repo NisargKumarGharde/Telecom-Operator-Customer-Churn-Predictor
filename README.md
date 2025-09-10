@@ -39,11 +39,13 @@ The project uses popular machine learning models such as:
 - Random Forest
 - XGBoost
 
-You can configure hyperparameters and try different models using provided scripts/notebooks.
-
 ## Results
 
 - Visualization of churn rates
 - Confusion matrix and classification reports
 - ROC curve and feature importance plots
 
+### *Also
+Sorry for any inconvenience if caused while reviewing the repository.
+
+## Thank You
