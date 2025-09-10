@@ -3,6 +3,9 @@
 Welcome to the **Telecom Operator Customer Churn Predictor** repository!  
 This project aims to analyze customer data from a telecom operator and predict churn using machine learning techniques. Understanding churn is crucial for telecom businesses to retain customers and improve their services.
 
+## Note
+Please keep the Python script and sample data in a single folder, to avoid any error.
+
 ## Project Overview
 
 Customer churn prediction helps telecom companies identify customers likely to leave their service. Using data analysis and predictive modeling, this repository provides tools to:
