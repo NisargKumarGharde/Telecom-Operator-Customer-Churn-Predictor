@@ -5,6 +5,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 from sklearn.preprocessing import LabelEncoder
 import seaborn as sns
 import matplotlib.pyplot as plt
+import argparse
 
 def preprocess_data(df):
     """
@@ -97,10 +98,20 @@ def train_and_evaluate_model(df):
     plt.show()
 
 if __name__ == '__main__':
+    # Set up argument parser
+    parser = argparse.ArgumentParser(description="Telecom Operator Customer Churn Predictor")
+    parser.add_argument(
+        "-f", "--file", 
+        default="telecom_churn.csv",
+        help="Path to the telecom churn dataset CSV file"
+    )
+    
+    args = parser.parse_args()
+
     # Load the dataset
     try:
-        df = pd.read_csv('telecom_churn.csv')
-        print("Dataset 'telecom_churn.csv' loaded successfully.")
+        df = pd.read_csv(args.file)
+        print(f"Dataset '{args.file}' loaded successfully.")
         
         # Preprocess the data
         processed_df, le_churn = preprocess_data(df)
@@ -109,5 +120,5 @@ if __name__ == '__main__':
         train_and_evaluate_model(processed_df)
         
     except FileNotFoundError:
-        print("Error: 'telecom_churn.csv' not found.")
-        print("Please make sure the CSV file is in the same directory as the script.")
+        print(f"Error: '{args.file}' not found.")
+        print("Please make sure the CSV file path is correct.")
