@@ -17,6 +17,28 @@ This project provides a machine learning pipeline designed to predict customer c
 - **Evaluation Metrics:** Generates comprehensive performance reports including Accuracy, Precision, Recall, and Confusion Matrices.
 - **Feature Importance Analysis:** Extracts and visualizes the top drivers of customer churn (e.g., Contract Type, Monthly Charges) to provide actionable business insights.
 
+## Why I Built This
+
+[#why-i-built-this](#why-i-built-this)
+
+This project is the classical-ML counterpart to my [GCP Customer Churn Intelligence Platform](link-here): same problem domain, deliberately different execution. Where the GCP project focuses on production deployment (streaming ingestion, serverless model serving, cloud-native ELT), this one is about getting the modeling fundamentals right end-to-end: clean preprocessing, a well-evaluated baseline model, and clear feature importance analysis, the kind of pipeline you'd build before deciding anything is worth productionizing.
+
+## Engineering Decisions
+
+[#engineering-decisions](#engineering-decisions)
+
+**Why RandomForest?** It handles mixed categorical/numerical features well without heavy preprocessing, and its built-in feature importance gives directly actionable business insight (which is the actual point of churn modeling) rather than just a black-box prediction.
+
+**Why median imputation?** Telecom billing and usage fields are right-skewed (a few customers with very high charges/tenure), so median is more robust to outliers than mean imputation.
+
+## What's Next
+
+[#whats-next](#whats-next)
+
+- Compare against XGBoost/LightGBM baselines
+- Add cross-validation and hyperparameter tuning instead of a single train/test split
+- Wrap the trained model behind a small Flask/FastAPI endpoint for inference
+
 ## Dataset
 The model is trained on a telecom customer dataset containing:
 - **Demographics:** Gender, Senior Citizen status, Partner/Dependents.
