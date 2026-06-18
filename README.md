@@ -21,7 +21,7 @@ This project provides a machine learning pipeline designed to predict customer c
 
 [#why-i-built-this](#why-i-built-this)
 
-This project is the classical-ML counterpart to my [GCP Customer Churn Intelligence Platform](link-here): same problem domain, deliberately different execution. Where the GCP project focuses on production deployment (streaming ingestion, serverless model serving, cloud-native ELT), this one is about getting the modeling fundamentals right end-to-end: clean preprocessing, a well-evaluated baseline model, and clear feature importance analysis, the kind of pipeline you'd build before deciding anything is worth productionizing.
+This project is the classical-ML counterpart to my [GCP Customer Churn Intelligence Platform](https://github.com/NisargKumarGharde/gcp-churn-intelligence-platform.git): same problem domain, deliberately different execution. Where the GCP project focuses on production deployment (streaming ingestion, serverless model serving, cloud-native ELT), this one is about getting the modeling fundamentals right end-to-end: clean preprocessing, a well-evaluated baseline model, and clear feature importance analysis, the kind of pipeline you'd build before deciding anything is worth productionizing.
 
 ## Engineering Decisions
 
